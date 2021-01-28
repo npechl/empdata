@@ -12,6 +12,7 @@ This package provides the following data tables.
 ## Installation 
 
 ```
+install.packages("devtools")
 devtools::install_github("nikopech/empdata")
 ```
 
@@ -21,8 +22,6 @@ devtools::install_github("nikopech/empdata")
 library(empdata)
 
 str(biom_data_150bp)
-
-str(observation_metadata_150bp)
-
-str(sample_metadata)
+# str(observation_metadata_150bp)
+# str(sample_metadata)
 ```
