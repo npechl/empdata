@@ -20,7 +20,7 @@ Data frame with columns
 biom_data_150bp
 }
 \description{
-This a 976-sample subset of the EMP (Earth Microbiome Project) observation table containing 150bp-length sequences.
+This a 975-sample subset of the EMP (Earth Microbiome Project) observation table containing 150bp-length sequences.
 The samples were picked randomly and evenly across 17 habitats and then evenly across studies in each sample type.
 }
 \examples{
