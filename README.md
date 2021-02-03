@@ -29,7 +29,7 @@ str(biom_data_150bp)
 
 ## License
 
-All data sets were collected from the ftp site of the [Earth Microbiome Project](https://www.earthmicrobiome.org/).
+All data sets were collected from the [FTP site](ftp://ftp.microbio.me/emp/release1) of the [Earth Microbiome Project](https://www.earthmicrobiome.org/).
 
 Please cite the following publication if you use any of them:
 
