@@ -1,5 +1,5 @@
 Package: empdata
-Title: What the Package Does (One Line, Title Case)
+Title: A 976-sample subset with 150-bp length sequences of the EMP (Earth Microbiome Project) dataset
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Nikolaos",
@@ -7,7 +7,8 @@ Authors@R:
            email = "nikosp41@certh.gr",
            role = c("aut", "cre"),
            comment = c(ORCID = "https://orcid.org/0000-0003-2502-612X"))
-Description: What the package does (one paragraph).
+Description: This a 976-sample subset of the EMP (Earth Microbiome Project) dataset containing 150bp-length sequences. 
+             The samples were picked randomly and evenly across 17 habitats and then evenly across studies in each sample type.
 License: CC BY-SA 4.0 + file LICENSE
 Encoding: UTF-8
 LazyData: true

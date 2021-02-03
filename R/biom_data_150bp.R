@@ -1,7 +1,7 @@
 #' Biom data table
-#'
-#' This is a data set containing sequence count values
-#' originated from the Earth Microbiome Project.
+#' 
+#' This a 976-sample subset of the EMP (Earth Microbiome Project) observation table containing 150bp-length sequences.
+#' The samples were picked randomly and evenly across 17 habitats and then evenly across studies in each sample type.
 #'
 #' @source <https://earthmicrobiome.org/>
 #' @format Data frame with columns

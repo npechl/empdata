@@ -24,8 +24,8 @@ Data frame with columns
 observation_metadata_150bp
 }
 \description{
-This is a data set containing the related taxonomy
-for the sequences originated from the Earth Microbiome Project.
+This a 976-sample subset of the EMP (Earth Microbiome Project) taxonomy table containing 150bp-length sequences.
+The samples were picked randomly and evenly across 17 habitats and then evenly across studies in each sample type.
 }
 \examples{
   head(observation_metadata_150bp)
