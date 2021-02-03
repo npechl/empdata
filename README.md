@@ -33,8 +33,8 @@ All data sets were collected from the [FTP site](ftp://ftp.microbio.me/emp/relea
 
 Please cite the following publication if you use any of them:
 
-Thompson, L., Sanders, J., McDonald, D. et al. 
-A communal catalogue reveals Earth’s multiscale microbial diversity. 
-Nature 551, 457–463 (2017). https://doi.org/10.1038/nature24621
+*Thompson, L., Sanders, J., McDonald, D. et al.* 
+*A communal catalogue reveals Earth’s multiscale microbial diversity. *
+*Nature 551, 457–463 (2017). https://doi.org/10.1038/nature24621*
 
 Please see the [LICENSE](LICENSE) file for details
