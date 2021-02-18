@@ -13,7 +13,7 @@ This package provides the following data tables.
 ## Installation 
 
 ```
-install.packages("devtools")
+# install.packages("devtools")
 devtools::install_github("nikopech/empdata")
 ```
 
