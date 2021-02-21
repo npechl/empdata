@@ -12,14 +12,14 @@ This package provides the following data tables.
 
 ## Installation 
 
-```
+```R
 # install.packages("devtools")
 devtools::install_github("nikopech/empdata")
 ```
 
 ## Quick start
 
-```
+```R
 library(empdata)
 
 str(biom_data_150bp)
