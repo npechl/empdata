@@ -2,7 +2,7 @@
 #'
 #' This a 975-sample subset of the EMP (Earth Microbiome Project) taxonomy table containing 150bp-length sequences.
 #' The samples were picked randomly and evenly across 17 habitats and then evenly across studies in each sample type.
-#' 
+#'
 #' @source <https://earthmicrobiome.org/>
 #' @format Data frame with columns
 #' \describe{

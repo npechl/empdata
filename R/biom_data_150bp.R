@@ -1,5 +1,5 @@
 #' Biom data table
-#' 
+#'
 #' This a 975-sample subset of the EMP (Earth Microbiome Project) observation table containing 150bp-length sequences.
 #' The samples were picked randomly and evenly across 17 habitats and then evenly across studies in each sample type.
 #'
@@ -12,5 +12,5 @@
 #' \item{...}{Sample names.}
 #' }
 #' @examples
-#'   head(biom_data_150bp)
+#'   head(biom_data_150bp[,1:6])
 "biom_data_150bp"
