@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Articles • empdata</title>
+<title>Biom data table — biom_data_150bp • empdata</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,12 @@
 
 
 
-<meta property="og:title" content="Articles" />
+<meta property="og:title" content="Biom data table — biom_data_150bp" />
+<meta property="og:description" content="This a 975-sample subset of the EMP (Earth Microbiome Project) observation table containing 150bp-length sequences.
+The samples were picked randomly and evenly across 17 habitats and then evenly across studies in each sample type." />
 
 
-
+<meta name="robots" content="noindex">
 
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
@@ -58,7 +60,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-article-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -71,7 +73,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">empdata</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.0.1.0</span>
       </span>
     </div>
 
@@ -111,18 +113,61 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Articles</h1>
+    <h1>Biom data table</h1>
+    
+    <div class="hidden name"><code>biom_data_150bp.Rd</code></div>
     </div>
 
-    <div class="section ">
-      <h3>All vignettes</h3>
-      <p class="section-desc"></p>
-
-      <dl>
-        <dt><a href="empdata.html">Introduction to empdata package</a></dt>
-        <dd></dt>
-      </dl>
+    <div class="ref-description">
+    <p>This a 975-sample subset of the EMP (Earth Microbiome Project) observation table containing 150bp-length sequences.
+The samples were picked randomly and evenly across 17 habitats and then evenly across studies in each sample type.</p>
     </div>
+
+    <pre class="usage"><span class='va'>biom_data_150bp</span></pre>
+
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>Data frame with columns</p><dl>
+<dt>sequence</dt><dd><p>Observation-sequence found.</p></dd>
+<dt>807.W.S.12.b</dt><dd><p>Sample name.</p></dd>
+<dt>2382.RU006.C181.RH.2.383.root.9.11.lane1.NoIndex.L001.sequences</dt><dd><p>Sample name.</p></dd>
+<dt>...</dt><dd><p>Sample names.</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://earthmicrobiome.org/'>https://earthmicrobiome.org/</a></p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>biom_data_150bp</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span><span class='op'>]</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;                                                                                                                                                 sequence
+#&gt; 1 TACGGAGGGTGCAAGCGTTGTCCGGAATCACTGGGTGTAAAGGGTGTGTAGGTGGATCTGTAAGTCAGAGGTGAAAGCCCACAGCTTAACTGTGGAACTGCCTTTGATACTGCTGATCTTGAGTACTGGAGGGGCTGCTAGAATTCGTGG
+#&gt; 2 TACGAAGGGTGCGAGCGTTATTCGGATTTACTGGGCGTAAAGGGCGCGTAGGCGGTTTCCTAAGTCACTTGTTAAAGACCACTTAAACCGGTGGGGATGCGAGTGAAACTGGGAGGCTAGAGGGTAGGAGAGAGAAGTGGAATTCTTGGA
+#&gt; 3 TACGGAGGGTGCAAGCGTTATCCGGATTCACTGGGTTTAAAGGGTGCGTAGGTGGGTCTGTAAGTCCGTGGTGAAATCTCCGAGCTTAACTCGGAAACTGCCATGGATACTATAGGTCTTGAATACTGTGGAGGTCAGCGGAATATGTCA
+#&gt; 4 TACGGAGGGTGCAAGCGTTATCCGGAATCATTGGGTTTAAAGGGTGCGTAGGCGGTCTAATAAGTCAGAGGTGAAATCCCTACCGCTTAACGGAGGAATTGCCTTTGAAACTATCGGACTTGAAATAGTGTGACGTTGGCGGAATGAGTA
+#&gt; 5 TACGTAGGGGGCGAGCGTTGTCCGAAGTTACTGGGCGTAAAGCGCGCGTAGGCGGTCTTCCAAGTCTGGGGTGAAAGGTTCAACGCTCAACGTGAACAGTGCCTTGGATACTGGGAGACTTGAGTCTGGGAGGGGGAAGGGGAATTCCTG
+#&gt; 6 TACGAAGGGGGCTAGCGTTGCTCGGAATCACTGGGCGTAAAGCGCACGTAGGCGGACTCTTAAGTCGGGGGTGAAATCCCGGAGCTCAACTCCGGAACTGCCTTCGATACTGAGAGTCTTCGAGTCCGGGAGAGGTGAGTGGAACTGCGA
+#&gt;   807.W.S.12.b 2382.RU006.C181.RH.2.383.root.9.11.lane1.NoIndex.L001.sequences
+#&gt; 1            0                                                               0
+#&gt; 2            0                                                               0
+#&gt; 3            0                                                               0
+#&gt; 4            0                                                               0
+#&gt; 5            0                                                               0
+#&gt; 6            0                                                               0
+#&gt;   861.U70.jul09 804.LS11.72a 1773.Chirox.lance2.ugi
+#&gt; 1             0            0                      0
+#&gt; 2             0            0                      0
+#&gt; 3             0            0                      0
+#&gt; 4             0            0                      0
+#&gt; 5             0            0                      0
+#&gt; 6             0            0                      0</div></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 

@@ -1,5 +1,5 @@
 ---
-title: "Introduction to empdata"
+title: "Introduction to empdata package"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{empdata}
@@ -14,44 +14,63 @@ vignette: >
 <!-- # ) -->
 <!-- # ``` -->
 
-## Overview
+## Package overview
 
-This is a 975-sample subset of the EMP (Earth Microbiome Project) dataset containing 150bp-length sequences. 
-All samples were picked randomly and evenly across 17 habitats and then evenly across studies in each sample type.
+`empdata` is a collection of metagenomic data originated from the [Earth Microbiome Project](https://www.earthmicrobiome.org/) (EMP). The package contains a subset of 975 sample with 150bp-length sequences. 
 
-This package provides the following data tables.
+Full documentation regarding the EMP dataset can be found on the related article *[A communal catalogue reveals Earth’s multiscale microbial diversity](https://doi.org/10.1038/nature24621)*.
 
-* `biom_data_150bp`: observation-sequence counts per sample
-* `observation_metadata_150bp`: observation-sequence taxonomy
-* `sample_metadata`: sample metadata
+## Sample collection
 
+Samples were gathered for microbiome analysis. 
+Each sample sample was collected fresh and, where possible, immediately frozen in liquid nitrogen and stored at –80 °C. 
+Bulk samples (for example, soil, sediment, faeces) and fractionated bulk samples (for example, sponge coral surface tissue, centrifuged turbid water) were taken using microcentrifuge tubes. 
+Swabs (BD SWUBE dual cotton swabs or similar) were used for biofilm or surface samples. 
+Filters (Sterivex cartridges, 0.2 μm, Millipore) were used for water samples. 
+Samples were sent to laboratories in the United States for DNA extraction and sequencing: 
+water samples to Argonne National Laboratory, 
+soil samples to Lawrence Berkeley National Laboratory (pre-2014) or Pacific Northwest National Laboratory (2014 onward), 
+and faecal and other samples to the University of Colorado Boulder (pre-2015) or the University of California San Diego (2015 onward).
 
-## Installation 
+## Metadata curation
 
-```R
-# install.packages("devtools")
-devtools::install_github("nikopech/empdata")
-```
+Metadata were collected in compliance with MIMARKS, [EBI](https://www.ebi.ac.uk/ena), and [Qiita](http://qiita.microbio.me) standards, as described in the [EMP Metadata Guide](http://www.earthmicrobiome.org/protocols-and-standards/metadata-guide). 
 
-## Quick start
+### The EMP Ontology
 
-```R
-library(empdata)
+The EMP Ontology (EMPO) for microbial environments was devised to facilitate the present analysis while preserving interoperability and it was coordinated by the ENVO team.
+It contains annotations from ENVO, UBERON (metazoan anatomy), PO (plant ontology), [FAO](http://purl.obolibrary.org/obo/fao.owl)(fungal anatomy ontology), and OMP (ontology of microbial phenotypes)
+and it consists of three level categories:
 
-str(biom_data_150bp)
-# str(observation_metadata_150bp)
-# str(sample_metadata)
-```
+- *empo_1*: free-living or host-associated lifestyles
+- *empo_2*: saline or non-saline (if free-living) or animal or plant (if host-associated) 
+- *empo_3*: microbial environments
 
-## License
+Full descriptions of the EMP Ontology categories can be found at http://www.earthmicrobiome.org/protocols-and-standards/empo. 
+The W3C Web Ontology Language (OWL) document is available at http://purl.obolibrary.org/obo/envo/subsets/envoEmpo.owl. 
 
-All data sets were collected from the [FTP site](ftp://ftp.microbio.me/emp/release1) of the [Earth Microbiome Project](https://www.earthmicrobiome.org/).
+## DNA extraction, amplicon PCR, sequencing, and sequence pre-processing
 
-Please cite the following publication if you use any of them:
+DNA extraction and 16S rRNA amplicon sequencing was done based on the [EMP standard protocols](http://www.earthmicrobiome.org/protocols-and-standards/16s).
 
-*Thompson, L., Sanders, J., McDonald, D. et al.* 
-*A communal catalogue reveals Earth’s multiscale microbial diversity.*
-*Nature 551, 457–463 (2017). https://doi.org/10.1038/nature24621*
+## Tag sequence and subsets
 
-Please see the [LICENSE](LICENSE) file for details
+The overall EMP dataset is provided throught the [FTP site](ftp://ftp.microbio.me/emp/release1/) (release1) and it contains a total of 97 studies and 27,742 samples.
 
+Sequence data were error-filtered and trimmed to three different sequence lengths:
+
+- The length of the shortest sequencing run (90 bp)
+- Sequence data trimmed to 100 bp (greater sequence resolution but fewer samples)
+- Sequence data trimmed to 150 bp (greater sequence resolution but fewer samples)
+
+Additionaly, samples where randomly picked in order to give equal (as possible) representation across environments (EMPO level 3) and across studies within those environments. 
+The subsets contain 10,000, 5,000, and 2,000 samples (nested subsets). 
+
+## Package subset
+
+For the package development the subset of 2,000 samples with 150-bp length was chosen. 
+The related BIOM file was downloaded from the [FTP site](ftp://ftp.microbio.me/emp/release1/otu_tables/deblur/) (*emp_deblur_150bp.subset_2k.rare_5000.biom*).
+Sample metadata were also downloaded from the [FTP server](ftp://ftp.microbio.me/emp/release1/mapping_files/) (*emp_qiime_mapping_subset_2k.tsv*). 
+
+The metadata file was additionaly filtered in order to contain the sample from the downloaded BIOM file. 
+The resulting dataset contains 975 samples with sequences of 150bp length.

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Articles • empdata</title>
+<title>Function reference • empdata</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,10 @@
 
 
 
-<meta property="og:title" content="Articles" />
+<meta property="og:title" content="Function reference" />
 
 
-
+<meta name="robots" content="noindex">
 
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
@@ -58,7 +58,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-article-index">
+    <div class="container template-reference-index">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -71,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">empdata</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.0.1.0</span>
       </span>
     </div>
 
@@ -109,20 +109,58 @@
       </header>
 
 <div class="row">
-  <div class="col-md-9 contents">
+  <div class="contents col-md-9">
     <div class="page-header">
-      <h1>Articles</h1>
+      <h1>Reference</h1>
     </div>
 
-    <div class="section ">
-      <h3>All vignettes</h3>
-      <p class="section-desc"></p>
+    <table class="ref-index">
 
-      <dl>
-        <dt><a href="empdata.html">Introduction to empdata package</a></dt>
-        <dd></dt>
-      </dl>
-    </div>
+    <colgroup>
+      
+      <col class="alias" />
+      <col class="title" />
+    </colgroup>
+
+    <tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-datasets" class="hasAnchor"><a href="#section-datasets" class="anchor"></a>Datasets</h2>
+          <p class="section-desc"><p>Datasets included in empdata package.</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="biom_data_150bp.html">biom_data_150bp</a></code> </p>
+        </td>
+        <td><p>Biom data table</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="observation_metadata_150bp.html">observation_metadata_150bp</a></code> </p>
+        </td>
+        <td><p>Observation taxonomy table</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="sample_metadata.html">sample_metadata</a></code> </p>
+        </td>
+        <td><p>Sample metadata table</p></td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
