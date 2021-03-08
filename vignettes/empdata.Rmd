@@ -16,14 +16,14 @@ vignette: >
 
 ## Package overview
 
-`empdata` is a collection of metagenomic data originated from the [Earth Microbiome Project](https://www.earthmicrobiome.org/) (EMP). The package contains a subset of 975 sample with 150bp-length sequences. 
+**`empdata`** is a collection of metagenomic data originated from the [Earth Microbiome Project](https://www.earthmicrobiome.org/) (EMP). The package contains a subset of 975 samples with 150bp-length sequences. 
 
-Full documentation regarding the EMP dataset can be found on the related article *[A communal catalogue reveals Earth’s multiscale microbial diversity](https://doi.org/10.1038/nature24621)*.
+Full documentation regarding the EMP dataset can be found in the related article *[A communal catalogue reveals Earth’s multiscale microbial diversity](https://doi.org/10.1038/nature24621)*.
 
 ## Sample collection
 
 Samples were gathered for microbiome analysis. 
-Each sample sample was collected fresh and, where possible, immediately frozen in liquid nitrogen and stored at –80 °C. 
+Each sample was collected fresh and, where possible, immediately frozen in liquid nitrogen and stored at –80 °C. 
 Bulk samples (for example, soil, sediment, faeces) and fractionated bulk samples (for example, sponge coral surface tissue, centrifuged turbid water) were taken using microcentrifuge tubes. 
 Swabs (BD SWUBE dual cotton swabs or similar) were used for biofilm or surface samples. 
 Filters (Sterivex cartridges, 0.2 μm, Millipore) were used for water samples. 
@@ -40,7 +40,7 @@ Metadata were collected in compliance with MIMARKS, [EBI](https://www.ebi.ac.uk/
 
 The EMP Ontology (EMPO) for microbial environments was devised to facilitate the present analysis while preserving interoperability and it was coordinated by the ENVO team.
 It contains annotations from ENVO, UBERON (metazoan anatomy), PO (plant ontology), [FAO](http://purl.obolibrary.org/obo/fao.owl)(fungal anatomy ontology), and OMP (ontology of microbial phenotypes)
-and it consists of three level categories:
+and it consists of three-level categories:
 
 - *empo_1*: free-living or host-associated lifestyles
 - *empo_2*: saline or non-saline (if free-living) or animal or plant (if host-associated) 
@@ -51,11 +51,11 @@ The W3C Web Ontology Language (OWL) document is available at http://purl.obolibr
 
 ## DNA extraction, amplicon PCR, sequencing, and sequence pre-processing
 
-DNA extraction and 16S rRNA amplicon sequencing was done based on the [EMP standard protocols](http://www.earthmicrobiome.org/protocols-and-standards/16s).
+DNA extraction and 16S rRNA amplicon sequencing were done based on the [EMP standard protocols](http://www.earthmicrobiome.org/protocols-and-standards/16s).
 
 ## Tag sequence and subsets
 
-The overall EMP dataset is provided throught the [FTP site](ftp://ftp.microbio.me/emp/release1/) (release1) and it contains a total of 97 studies and 27,742 samples.
+The overall EMP dataset is provided throughout the [FTP site](ftp://ftp.microbio.me/emp/release1/) (release1) and it contains a total of 97 studies and 27,742 samples.
 
 Sequence data were error-filtered and trimmed to three different sequence lengths:
 
@@ -63,14 +63,14 @@ Sequence data were error-filtered and trimmed to three different sequence length
 - Sequence data trimmed to 100 bp (greater sequence resolution but fewer samples)
 - Sequence data trimmed to 150 bp (greater sequence resolution but fewer samples)
 
-Additionaly, samples where randomly picked in order to give equal (as possible) representation across environments (EMPO level 3) and across studies within those environments. 
+Additionally, samples were randomly picked to give equal (as possible) representation across environments (EMPO level 3) and studies within those environments. 
 The subsets contain 10,000, 5,000, and 2,000 samples (nested subsets). 
 
 ## Package subset
 
-For the package development the subset of 2,000 samples with 150-bp length was chosen. 
+For the package development, the subset of 2,000 samples with 150-bp length was chosen. 
 The related BIOM file was downloaded from the [FTP site](ftp://ftp.microbio.me/emp/release1/otu_tables/deblur/) (*emp_deblur_150bp.subset_2k.rare_5000.biom*).
 Sample metadata were also downloaded from the [FTP server](ftp://ftp.microbio.me/emp/release1/mapping_files/) (*emp_qiime_mapping_subset_2k.tsv*). 
 
-The metadata file was additionaly filtered in order to contain the sample from the downloaded BIOM file. 
+The metadata file was additionally filtered to contain only the samples from the downloaded BIOM file. 
 The resulting dataset contains 975 samples with sequences of 150bp length.

@@ -1,6 +1,6 @@
 Package: empdata
 Title: A 975-sample subset with 150-bp length sequences of the EMP (Earth Microbiome Project) dataset
-Version: 0.0.1.0
+Version: 0.0.1.1
 Authors@R: 
     person(given = "Nikolaos",
            family = "Pechlivanis",

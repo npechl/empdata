@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">empdata</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.0.1.0</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.0.1.1</span>
       </span>
     </div>
 
@@ -91,13 +91,13 @@
 <div id="package-overview" class="section level2">
 <h2 class="hasAnchor">
 <a href="#package-overview" class="anchor"></a>Package overview</h2>
-<p><code>empdata</code> is a collection of metagenomic data originated from the <a href="https://www.earthmicrobiome.org/">Earth Microbiome Project</a> (EMP). The package contains a subset of 975 sample with 150bp-length sequences.</p>
-<p>Full documentation regarding the EMP dataset can be found on the related article <em><a href="https://doi.org/10.1038/nature24621">A communal catalogue reveals Earth’s multiscale microbial diversity</a></em>.</p>
+<p><strong><code>empdata</code></strong> is a collection of metagenomic data originated from the <a href="https://www.earthmicrobiome.org/">Earth Microbiome Project</a> (EMP). The package contains a subset of 975 samples with 150bp-length sequences.</p>
+<p>Full documentation regarding the EMP dataset can be found in the related article <em><a href="https://doi.org/10.1038/nature24621">A communal catalogue reveals Earth’s multiscale microbial diversity</a></em>.</p>
 </div>
 <div id="sample-collection" class="section level2">
 <h2 class="hasAnchor">
 <a href="#sample-collection" class="anchor"></a>Sample collection</h2>
-<p>Samples were gathered for microbiome analysis. Each sample sample was collected fresh and, where possible, immediately frozen in liquid nitrogen and stored at –80 °C. Bulk samples (for example, soil, sediment, faeces) and fractionated bulk samples (for example, sponge coral surface tissue, centrifuged turbid water) were taken using microcentrifuge tubes. Swabs (BD SWUBE dual cotton swabs or similar) were used for biofilm or surface samples. Filters (Sterivex cartridges, 0.2 μm, Millipore) were used for water samples. Samples were sent to laboratories in the United States for DNA extraction and sequencing: water samples to Argonne National Laboratory, soil samples to Lawrence Berkeley National Laboratory (pre-2014) or Pacific Northwest National Laboratory (2014 onward), and faecal and other samples to the University of Colorado Boulder (pre-2015) or the University of California San Diego (2015 onward).</p>
+<p>Samples were gathered for microbiome analysis. Each sample was collected fresh and, where possible, immediately frozen in liquid nitrogen and stored at –80 °C. Bulk samples (for example, soil, sediment, faeces) and fractionated bulk samples (for example, sponge coral surface tissue, centrifuged turbid water) were taken using microcentrifuge tubes. Swabs (BD SWUBE dual cotton swabs or similar) were used for biofilm or surface samples. Filters (Sterivex cartridges, 0.2 μm, Millipore) were used for water samples. Samples were sent to laboratories in the United States for DNA extraction and sequencing: water samples to Argonne National Laboratory, soil samples to Lawrence Berkeley National Laboratory (pre-2014) or Pacific Northwest National Laboratory (2014 onward), and faecal and other samples to the University of Colorado Boulder (pre-2015) or the University of California San Diego (2015 onward).</p>
 </div>
 <div id="metadata-curation" class="section level2">
 <h2 class="hasAnchor">
@@ -106,7 +106,7 @@
 <div id="the-emp-ontology" class="section level3">
 <h3 class="hasAnchor">
 <a href="#the-emp-ontology" class="anchor"></a>The EMP Ontology</h3>
-<p>The EMP Ontology (EMPO) for microbial environments was devised to facilitate the present analysis while preserving interoperability and it was coordinated by the ENVO team. It contains annotations from ENVO, UBERON (metazoan anatomy), PO (plant ontology), <a href="http://purl.obolibrary.org/obo/fao.owl">FAO</a>(fungal anatomy ontology), and OMP (ontology of microbial phenotypes) and it consists of three level categories:</p>
+<p>The EMP Ontology (EMPO) for microbial environments was devised to facilitate the present analysis while preserving interoperability and it was coordinated by the ENVO team. It contains annotations from ENVO, UBERON (metazoan anatomy), PO (plant ontology), <a href="http://purl.obolibrary.org/obo/fao.owl">FAO</a>(fungal anatomy ontology), and OMP (ontology of microbial phenotypes) and it consists of three-level categories:</p>
 <ul>
 <li>
 <em>empo_1</em>: free-living or host-associated lifestyles</li>
@@ -121,25 +121,25 @@
 <div id="dna-extraction-amplicon-pcr-sequencing-and-sequence-pre-processing" class="section level2">
 <h2 class="hasAnchor">
 <a href="#dna-extraction-amplicon-pcr-sequencing-and-sequence-pre-processing" class="anchor"></a>DNA extraction, amplicon PCR, sequencing, and sequence pre-processing</h2>
-<p>DNA extraction and 16S rRNA amplicon sequencing was done based on the <a href="http://www.earthmicrobiome.org/protocols-and-standards/16s">EMP standard protocols</a>.</p>
+<p>DNA extraction and 16S rRNA amplicon sequencing were done based on the <a href="http://www.earthmicrobiome.org/protocols-and-standards/16s">EMP standard protocols</a>.</p>
 </div>
 <div id="tag-sequence-and-subsets" class="section level2">
 <h2 class="hasAnchor">
 <a href="#tag-sequence-and-subsets" class="anchor"></a>Tag sequence and subsets</h2>
-<p>The overall EMP dataset is provided throught the <a href="ftp://ftp.microbio.me/emp/release1/">FTP site</a> (release1) and it contains a total of 97 studies and 27,742 samples.</p>
+<p>The overall EMP dataset is provided throughout the <a href="ftp://ftp.microbio.me/emp/release1/">FTP site</a> (release1) and it contains a total of 97 studies and 27,742 samples.</p>
 <p>Sequence data were error-filtered and trimmed to three different sequence lengths:</p>
 <ul>
 <li>The length of the shortest sequencing run (90 bp)</li>
 <li>Sequence data trimmed to 100 bp (greater sequence resolution but fewer samples)</li>
 <li>Sequence data trimmed to 150 bp (greater sequence resolution but fewer samples)</li>
 </ul>
-<p>Additionaly, samples where randomly picked in order to give equal (as possible) representation across environments (EMPO level 3) and across studies within those environments. The subsets contain 10,000, 5,000, and 2,000 samples (nested subsets).</p>
+<p>Additionally, samples were randomly picked to give equal (as possible) representation across environments (EMPO level 3) and studies within those environments. The subsets contain 10,000, 5,000, and 2,000 samples (nested subsets).</p>
 </div>
 <div id="package-subset" class="section level2">
 <h2 class="hasAnchor">
 <a href="#package-subset" class="anchor"></a>Package subset</h2>
-<p>For the package development the subset of 2,000 samples with 150-bp length was chosen. The related BIOM file was downloaded from the <a href="ftp://ftp.microbio.me/emp/release1/otu_tables/deblur/">FTP site</a> (<em>emp_deblur_150bp.subset_2k.rare_5000.biom</em>). Sample metadata were also downloaded from the <a href="ftp://ftp.microbio.me/emp/release1/mapping_files/">FTP server</a> (<em>emp_qiime_mapping_subset_2k.tsv</em>).</p>
-<p>The metadata file was additionaly filtered in order to contain the sample from the downloaded BIOM file. The resulting dataset contains 975 samples with sequences of 150bp length.</p>
+<p>For the package development, the subset of 2,000 samples with 150-bp length was chosen. The related BIOM file was downloaded from the <a href="ftp://ftp.microbio.me/emp/release1/otu_tables/deblur/">FTP site</a> (<em>emp_deblur_150bp.subset_2k.rare_5000.biom</em>). Sample metadata were also downloaded from the <a href="ftp://ftp.microbio.me/emp/release1/mapping_files/">FTP server</a> (<em>emp_qiime_mapping_subset_2k.tsv</em>).</p>
+<p>The metadata file was additionally filtered to contain only the samples from the downloaded BIOM file. The resulting dataset contains 975 samples with sequences of 150bp length.</p>
 </div>
   </div>
 
