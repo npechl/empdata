@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">empdata</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.0.1.1</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.0.1.2</span>
       </span>
     </div>
 
@@ -91,18 +91,33 @@
 <div id="package-overview" class="section level2">
 <h2 class="hasAnchor">
 <a href="#package-overview" class="anchor"></a>Package overview</h2>
-<p><strong><code>empdata</code></strong> is a collection of metagenomic data originated from the <a href="https://www.earthmicrobiome.org/">Earth Microbiome Project</a> (EMP). The package contains a subset of 975 samples with 150bp-length sequences.</p>
+<p><strong><code>empdata</code></strong> is a collection of metagenomic data originated from the <a href="https://www.earthmicrobiome.org/">Earth Microbiome Project</a> (EMP). The package contains a subset of 975 samples and 91,364 sequences of 150bp length, along with their taxonomy classification.</p>
 <p>Full documentation regarding the EMP dataset can be found in the related article <em><a href="https://doi.org/10.1038/nature24621">A communal catalogue reveals Earth’s multiscale microbial diversity</a></em>.</p>
 </div>
 <div id="sample-collection" class="section level2">
 <h2 class="hasAnchor">
 <a href="#sample-collection" class="anchor"></a>Sample collection</h2>
-<p>Samples were gathered for microbiome analysis. Each sample was collected fresh and, where possible, immediately frozen in liquid nitrogen and stored at –80 °C. Bulk samples (for example, soil, sediment, faeces) and fractionated bulk samples (for example, sponge coral surface tissue, centrifuged turbid water) were taken using microcentrifuge tubes. Swabs (BD SWUBE dual cotton swabs or similar) were used for biofilm or surface samples. Filters (Sterivex cartridges, 0.2 μm, Millipore) were used for water samples. Samples were sent to laboratories in the United States for DNA extraction and sequencing: water samples to Argonne National Laboratory, soil samples to Lawrence Berkeley National Laboratory (pre-2014) or Pacific Northwest National Laboratory (2014 onward), and faecal and other samples to the University of Colorado Boulder (pre-2015) or the University of California San Diego (2015 onward).</p>
+<p>Samples were submitted by the global community of microbial ecologists for microbiome analysis. Each sample was collected fresh and, where possible, immediately frozen in liquid nitrogen and stored at –80 °C. Bulk samples (for example, soil, sediment, faeces) and fractionated bulk samples (for example, sponge coral surface tissue, centrifuged turbid water) were taken using microcentrifuge tubes. Swabs (BD SWUBE dual cotton swabs or similar) were used for biofilm or surface samples. Filters (Sterivex cartridges, 0.2 μm, Millipore) were used for water samples. Samples were sent to laboratories in the United States for DNA extraction and sequencing: water samples to Argonne National Laboratory, soil samples to Lawrence Berkeley National Laboratory (pre-2014) or Pacific Northwest National Laboratory (2014 onward), and faecal and other samples to the University of Colorado Boulder (pre-2015) or the University of California San Diego (2015 onward).</p>
 </div>
 <div id="metadata-curation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#metadata-curation" class="anchor"></a>Metadata curation</h2>
-<p>Metadata were collected in compliance with MIMARKS, <a href="https://www.ebi.ac.uk/ena">EBI</a>, and <a href="http://qiita.microbio.me">Qiita</a> standards, as described in the <a href="http://www.earthmicrobiome.org/protocols-and-standards/metadata-guide">EMP Metadata Guide</a>.</p>
+<p>Sample metadata were collected in compliance with MIMARKS, <a href="https://www.ebi.ac.uk/ena">EBI</a>, and <a href="http://qiita.microbio.me">Qiita</a> standards, as described in the <a href="http://www.earthmicrobiome.org/protocols-and-standards/metadata-guide">EMP Metadata Guide</a> and they contain information for 6 categories:</p>
+<ul>
+<li>Publication study: <em>Title, Principal Investigator, DOI, Description, Study ID, EBI accession</em>
+</li>
+<li>Sequencing: <em>BarcodeSequence, LinkerPrimerSequence, PCR primers, Target gene, Target subfragment, Illumina technology, Extraction center, Run center, Run date</em>
+</li>
+<li>Host subject information: <em>host taxid, host common name, host scientific name, host taxonomy</em>
+</li>
+<li>Geographical information: <em>collection timestamp, country, latitude_deg, longitude_deg, depth_m, altitude_m, elevation_m</em>
+</li>
+<li>Physicochemical properties: <em>temperature, pH value, salinity, oxygen concentration, phosphate concentration, ammonium concentration, nitrate concentration, sulfate concentration</em>
+</li>
+<li>Ontologies: <em>ENVO ontologies, EMPO ontologies</em>
+</li>
+</ul>
+<p>A detailed documentation regarding the sample metadata can be found <a href="https://nikopech.github.io/empdata/reference/sample_metadata.html">here</a>.</p>
 <div id="the-emp-ontology" class="section level3">
 <h3 class="hasAnchor">
 <a href="#the-emp-ontology" class="anchor"></a>The EMP Ontology</h3>
@@ -118,9 +133,9 @@
 <p>Full descriptions of the EMP Ontology categories can be found at <a href="http://www.earthmicrobiome.org/protocols-and-standards/empo" class="uri">http://www.earthmicrobiome.org/protocols-and-standards/empo</a>. The W3C Web Ontology Language (OWL) document is available at <a href="http://purl.obolibrary.org/obo/envo/subsets/envoEmpo.owl" class="uri">http://purl.obolibrary.org/obo/envo/subsets/envoEmpo.owl</a>.</p>
 </div>
 </div>
-<div id="dna-extraction-amplicon-pcr-sequencing-and-sequence-pre-processing" class="section level2">
+<div id="s-rrna-amplicon-sequencing" class="section level2">
 <h2 class="hasAnchor">
-<a href="#dna-extraction-amplicon-pcr-sequencing-and-sequence-pre-processing" class="anchor"></a>DNA extraction, amplicon PCR, sequencing, and sequence pre-processing</h2>
+<a href="#s-rrna-amplicon-sequencing" class="anchor"></a>16S rRNA amplicon sequencing</h2>
 <p>DNA extraction and 16S rRNA amplicon sequencing were done based on the <a href="http://www.earthmicrobiome.org/protocols-and-standards/16s">EMP standard protocols</a>.</p>
 </div>
 <div id="tag-sequence-and-subsets" class="section level2">
@@ -133,13 +148,14 @@
 <li>Sequence data trimmed to 100 bp (greater sequence resolution but fewer samples)</li>
 <li>Sequence data trimmed to 150 bp (greater sequence resolution but fewer samples)</li>
 </ul>
+<p>Each subset comprises the exact sequences instead of clustered operational taxonomic units (OTU).</p>
 <p>Additionally, samples were randomly picked to give equal (as possible) representation across environments (EMPO level 3) and studies within those environments. The subsets contain 10,000, 5,000, and 2,000 samples (nested subsets).</p>
 </div>
 <div id="package-subset" class="section level2">
 <h2 class="hasAnchor">
 <a href="#package-subset" class="anchor"></a>Package subset</h2>
-<p>For the package development, the subset of 2,000 samples with 150-bp length was chosen. The related BIOM file was downloaded from the <a href="ftp://ftp.microbio.me/emp/release1/otu_tables/deblur/">FTP site</a> (<em>emp_deblur_150bp.subset_2k.rare_5000.biom</em>). Sample metadata were also downloaded from the <a href="ftp://ftp.microbio.me/emp/release1/mapping_files/">FTP server</a> (<em>emp_qiime_mapping_subset_2k.tsv</em>).</p>
-<p>The metadata file was additionally filtered to contain only the samples from the downloaded BIOM file. The resulting dataset contains 975 samples with sequences of 150bp length.</p>
+<p>For the <code>empdata</code> package development, the subset of 2,000 samples with 150-bp length was chosen. The related BIOM file was downloaded from the <a href="ftp://ftp.microbio.me/emp/release1/otu_tables/deblur/">FTP site</a> (<em>emp_deblur_150bp.subset_2k.rare_5000.biom</em>). Sample metadata were also downloaded from the <a href="ftp://ftp.microbio.me/emp/release1/mapping_files/">FTP server</a> (<em>emp_qiime_mapping_subset_2k.tsv</em>).</p>
+<p>The metadata file was additionally filtered to contain only the samples from the downloaded BIOM file. The resulting dataset contains 975 samples with 91,364 sequences of 150bp length.</p>
 </div>
   </div>
 

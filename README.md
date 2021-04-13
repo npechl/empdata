@@ -1,9 +1,9 @@
 # empdata
 
 This is a 975-sample subset of the EMP ([Earth Microbiome Project](https://www.earthmicrobiome.org/)) dataset containing 150bp-length sequences. 
-All samples were picked randomly and evenly across 17 habitats and then evenly across studies in each sample type.
+All samples were picked randomly and evenly across 17 habitats and then evenly across 97 studies in each sample type.
 
-This package provides the following data tables.
+This package provides the following data frames:
 
 * `biom_data_150bp`: observation-sequence counts per sample
 * `observation_metadata_150bp`: observation-sequence taxonomy
