@@ -1,7 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
-.data-raw/emp_deblur_90bp.subset_2k.rare_5000.biom
-.data-raw/emp_deblur_100bp.subset_2k.rare_5000.biom
-.data-raw/emp_deblur_150bp.subset_2k.rare_5000.biom
-.data-raw/emp_qiime_mapping_subset_2k.tsv
+./data-raw/emp_deblur_90bp.subset_2k.rare_5000.biom
+./data-raw/emp_deblur_100bp.subset_2k.rare_5000.biom
+./data-raw/emp_deblur_150bp.subset_2k.rare_5000.biom
+./data-raw/emp_qiime_mapping_subset_2k.tsv
