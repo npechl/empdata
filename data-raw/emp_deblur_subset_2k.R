@@ -41,3 +41,13 @@ observation_metadata_sub2k150 = biomformat::observation_metadata(emp.2k.150)
 base::save(biom_sub2k_150bp, file = "data/biom_sub2k_150bp.rda", compress = "bzip2")
 base::save(observation_metadata_sub2k150, file = "data/observation_metadata_sub2k150.rda", compress = "bzip2")
 
+# Create OTU table; subset 2k - 100bp -------------------------------------------------------------
+
+emp.2k.100 = biomformat::read_biom("data-raw/emp_deblur_100bp.subset_2k.rare_5000.biom")
+
+biom_sub2k_100bp = biomformat::biom_data(emp.2k.100)
+observation_metadata_sub2k100 = biomformat::observation_metadata(emp.2k.100)
+
+base::save(biom_sub2k_100bp, file = "data/biom_sub2k_100bp.rda", compress = "bzip2")
+base::save(observation_metadata_sub2k100, file = "data/observation_metadata_sub2k100.rda", compress = "bzip2")
+

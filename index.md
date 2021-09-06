@@ -5,9 +5,9 @@ All samples were picked randomly and evenly across 17 habitats and then evenly a
 
 This package provides the following data frames:
 
-* `biom_data_150bp`: observation-sequence counts per sample
-* `observation_metadata_150bp`: observation-sequence taxonomy
-* `sample_metadata`: sample metadata
+* `biom_sub2k_150bp`: observation-sequence counts per sample
+* `observation_metadata_sub2k150`: observation-sequence taxonomy
+* `sample_metadata_sub2k`: sample metadata
 
 
 ## Installation 
@@ -22,14 +22,16 @@ devtools::install_github("nikopech/empdata")
 ```R
 library(empdata)
 
-str(biom_data_150bp)
-# str(observation_metadata_150bp)
-# str(sample_metadata)
+str(biom_sub2k_150bp)
+# str(observation_metadata_sub2k150)
+# str(sample_metadata_sub2k)
 ```
 
 ## License
 
 All data sets were collected from the [FTP site](ftp://ftp.microbio.me/emp/release1) of the [Earth Microbiome Project](https://www.earthmicrobiome.org/).
+
+Sample processing, sequencing, and core amplicon data analysis were performed by the Earth Microbiome Project (www.earthmicrobiome.org), and all amplicon sequence data and metadata have been made public through the EMP data portal (qiita.microbio.me/emp).
 
 Please cite the following publication if you use any of them:
 
