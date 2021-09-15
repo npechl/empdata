@@ -34,9 +34,9 @@ if (!file.exists("data-raw/emp_qiime_mapping_subset_2k.tsv")) {
 
 # Create sample metadata table ------------------------------------
 
-sample_metadata_sub2k = data.table::fread("data-raw/emp_qiime_mapping_subset_2k.tsv")
+sample.metadata.sub2k = data.table::fread("data-raw/emp_qiime_mapping_subset_2k.tsv")
 
-base::save(sample_metadata_sub2k, file = "data/sample_metadata_sub2k.rda", compress = "xz")
+usethis::use_data(sample.metadata.sub2k)
 
 # utils::write.table(sample_metadata,
 #                    "data-raw/sample-metadata-150bp.txt",
