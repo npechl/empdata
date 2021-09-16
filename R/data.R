@@ -14,6 +14,7 @@
 #'
 #' A sparse matrix containing 90bp-sequence counts of the EMP's subset of 2,000 samples.
 #'
+#'
 "emp.data.2k90bp"
 
 
