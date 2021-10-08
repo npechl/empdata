@@ -5,7 +5,7 @@
 ```R
 # install.packages("devtools")
 devtools::install_github("nikopech/empdata")
-
+```
 ## License
 
 All data sets were collected from the [FTP site](ftp://ftp.microbio.me/emp/release1) of the [Earth Microbiome Project](https://www.earthmicrobiome.org/).
