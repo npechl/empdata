@@ -1,17 +1,18 @@
 
 
-#' Get
+#' Get sequences as a SeqFastadna object
 #'
 #' @param emp.obj a dgCMatrix object containing otu-observation table
 #' @param file.out Fasta file name to write
 #' @param print.out Should a fasta file be printed instead ??
 #'
-#' @import seqinr
+#' @importFrom seqinr write.fasta
 #'
 #' @return
 #' @export
 #'
 #' @examples
+#'
 
 get_sequences <- function(emp.obj,
                           file.out = "emp_data.fasta",
@@ -27,13 +28,15 @@ get_sequences <- function(emp.obj,
 
   } else if(class(emp.obj) != "dgCMatrix") {
 
-    stop("Please provide a sparse matrix of class dgCMatrix.")
+      stop(c("Please provide a sparse matrix of class dgCMatrix. \n\n",
+             "A list of the provided datasets can be found by calling 'list_otu_tables()'."))
 
   }
 
   if(is.null(emp.obj)) {
 
-    stop("Please provide a valid sparse matrix object or a name of the provided datasets.")
+    stop(c("Please provide a sparse matrix of class dgCMatrix. \n\n",
+           "A list of the provided datasets can be found by calling 'list_otu_tables()'."))
 
   }
 
@@ -44,12 +47,12 @@ get_sequences <- function(emp.obj,
 
   if(print.out) {
 
-    seqinr::write.fasta(sequences = sequences,
-                        names = seq.ids,
-                        file.out = file.out,
-                        nbchar = 60)
+    write.fasta(sequences = as.list(sequences),
+                names = as.list(seq.ids),
+                file.out = file.out,
+                nbchar = 60)
 
-    return()
+    # return()
 
   } else {
 
@@ -65,3 +68,4 @@ get_sequences <- function(emp.obj,
 
 
 }
+

@@ -36,6 +36,10 @@ if (!file.exists("data-raw/emp_qiime_mapping_subset_2k.tsv")) {
 
 sample.metadata.sub2k = data.table::fread("data-raw/emp_qiime_mapping_subset_2k.tsv")
 
+sample.metadata.sub2k$title = stringr::str_replace(sample.metadata.sub2k$title,
+                                                   "assemblagesÂ",
+                                                   "assemblages")
+
 usethis::use_data(sample.metadata.sub2k)
 
 # utils::write.table(sample_metadata,

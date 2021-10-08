@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_data.R
 \name{get_sequences}
 \alias{get_sequences}
-\title{Get}
+\title{Get sequences as a SeqFastadna object}
 \usage{
 get_sequences(emp.obj, file.out = "emp_data.fasta", print.out = FALSE)
 }
@@ -17,5 +17,8 @@ get_sequences(emp.obj, file.out = "emp_data.fasta", print.out = FALSE)
 
 }
 \description{
-Get
+Get sequences as a SeqFastadna object
+}
+\examples{
+
 }

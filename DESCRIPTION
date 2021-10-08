@@ -1,16 +1,17 @@
 Package: empdata
 Title: A 975-sample subset with 150-bp length sequences of the EMP (Earth Microbiome Project) dataset
-Version: 0.0.1.2
+Version: 0.99.0
 Authors@R: 
     person(given = "Nikolaos",
            family = "Pechlivanis",
-           email = "nikosp41@certh.gr",
+           email = "nikosp41@gmail.com",
            role = c("aut", "cre"),
            comment = c(ORCID = "https://orcid.org/0000-0003-2502-612X"))
 Description: empdata: An R package.
 License: CC BY-SA 4.0 + file LICENSE
 Encoding: UTF-8
 LazyData: true
+LazyDataCompression: xz
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports:
