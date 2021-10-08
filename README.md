@@ -1,31 +1,10 @@
 # empdata
 
-This is a 975-sample subset of the EMP ([Earth Microbiome Project](https://www.earthmicrobiome.org/)) dataset containing 150bp-length sequences. 
-All samples were picked randomly and evenly across 17 habitats and then evenly across 97 studies in each sample type.
-
-This package provides the following data frames:
-
-* `biom_sub2k_150bp`: observation-sequence counts per sample
-* `observation_metadata_sub2k150`: observation-sequence taxonomy
-* `sample_metadata_sub2k`: sample metadata
-
-
 ## Installation 
 
 ```R
 # install.packages("devtools")
 devtools::install_github("nikopech/empdata")
-```
-
-## Quick start
-
-```R
-library(empdata)
-
-str(biom_sub2k_150bp)
-# str(observation_metadata_sub2k150)
-# str(sample_metadata_sub2k)
-```
 
 ## License
 
