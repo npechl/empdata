@@ -10,7 +10,6 @@ Authors@R:
 Description: empdata: An R package.
 License: CC BY-SA 4.0 + file LICENSE
 Encoding: UTF-8
-LazyData: true
 LazyDataCompression: xz
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
